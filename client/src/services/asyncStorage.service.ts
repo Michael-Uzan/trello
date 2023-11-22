@@ -11,7 +11,7 @@ export const asincStorageService = {
   save,
 };
 
-function query(entityType: string, delay: number = 0): Promise<any> {
+function query(entityType: string, delay: number = 800): Promise<any> {
   const storedData: string | null = localStorage.getItem(entityType);
   const entities: any | Array<any> = storedData ? JSON.parse(storedData) : [];
 

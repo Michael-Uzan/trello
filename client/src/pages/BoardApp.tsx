@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from 'react';
 import { boardService } from '../services/board.service';
-import { useParams } from 'react-router-dom';
 import { IBoard } from '../interfaces/IBoard';
+import { BoardLists } from '../components/BoardLists';
+import { BoardHeader } from '../components/BoardHeader';
+
+import { useParams } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 
 export const BoardApp = () => {
   const { boardId } = useParams();
@@ -35,8 +38,17 @@ export const BoardApp = () => {
   }
 
   if (!board) {
-    return <div>{'loading'}</div>;
+    return <div>{'Loading'}</div>;
   }
 
-  return <div>{board.title}</div>;
+  const { title, lists } = board;
+
+  return (
+    <div className="board-app flex direction-col">
+      <BoardHeader title={title} />
+      <div className="board-canvas flex">
+        <BoardLists lists={lists} />
+      </div>
+    </div>
+  );
 };
