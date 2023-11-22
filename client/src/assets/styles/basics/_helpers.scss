@@ -1,0 +1,190 @@
+// Font Sizes
+
+.fs12 {
+    font-size: rem(12px);
+}
+
+.fs14 {
+    font-size: rem(14px);
+}
+
+.fs18 {
+    font-size: rem(18px);
+}
+
+.fs20 {
+    font-size: rem(20px);
+}
+
+.fs24 {
+    font-size: rem(24px);
+}
+
+.fs28 {
+    font-size: rem(28px);
+}
+
+.fs30 {
+    font-size: rem(30px);
+}
+
+// flex helpers
+
+.flex {
+    display: flex;
+
+    > *.full {
+        flex: 1;
+    }
+
+    &.direction-col {
+        flex-direction: column;
+    }
+
+    &.direction-row {
+        flex-direction: row;
+    }
+
+    &.justify-center {
+        justify-content: center;
+    }
+
+    &.align-center {
+        align-items: center;
+    }
+
+    &.space-between {
+        justify-content: space-between;
+    }
+
+    &.space-around {
+        justify-content: space-around;
+    }
+
+    &.items-flex-start {
+        align-items: flex-start;
+    }
+
+    &.wrap {
+        flex-wrap: wrap;
+    }
+}
+.width-100 {
+    width: 100%;
+}
+.clean-list {
+    padding-inline-start: 0px;
+    margin: 0;
+    list-style-type: none;
+}
+
+.card-details-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.pointer:hover {
+    cursor: pointer;
+}
+
+// COLORS:
+
+.done {
+    background-color: $clr1;
+}
+
+.clr1 {
+    background-color: $clr1;
+}
+
+.clr2 {
+    background-color: $clr2;
+}
+
+.clr3 {
+    background-color: $clr3;
+}
+
+.clr4 {
+    background-color: $clr4;
+}
+
+.clr5 {
+    background-color: $clr5;
+}
+
+.clr6 {
+    background-color: $clr6;
+}
+
+.clr7 {
+    background-color: $clr7;
+}
+
+.clr8 {
+    background-color: $clr8;
+}
+
+.clr9 {
+    background-color: $clr9;
+}
+
+.clr10 {
+    background-color: $clr10;
+}
+
+.clr11 {
+    background-color: $clr11;
+}
+
+.bgclr1 {
+    background-color: $bgclr1;
+}
+
+.bgclr2 {
+    background-color: $bgclr2;
+}
+
+.bgclr3 {
+    background-color: $bgclr3;
+}
+
+.bgclr4 {
+    background-color: $bgclr4;
+}
+
+.bgclr5 {
+    background-color: $bgclr5;
+}
+
+.bgclr6 {
+    background-color: $bgclr6;
+}
+
+.bgclr7 {
+    background-color: $bgclr7;
+}
+
+.bgclr8 {
+    background-color: $bgclr8;
+}
+
+.bgclr9 {
+    background-color: $bgclr9;
+}
+
+.fancy-scrollbar {
+    &::-webkit-scrollbar {
+        width: 9px;
+        padding-bottom: 4px;
+    }
+    &::-webkit-scrollbar-track {
+        margin-bottom: 4px;
+        border-radius: 1rem;
+        background: #091e4214;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #bfc3ce;
+    }
+}
