@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any*/
-import boards from '../data/boards.json';
+// import boards from 'dummyData/boards.json';
+import workspaces from 'dummyData/workspaces.json';
 
 export const asincStorageService = {
   query,
@@ -12,6 +13,7 @@ export const asincStorageService = {
 };
 
 function query(entityType: string, delay: number = 800): Promise<any> {
+  save('workspaces', workspaces);
   const storedData: string | null = localStorage.getItem(entityType);
   const entities: any | Array<any> = storedData ? JSON.parse(storedData) : [];
 
@@ -23,7 +25,7 @@ function query(entityType: string, delay: number = 800): Promise<any> {
 }
 
 function get(entityType: string, entityId: string): Promise<any> {
-  save('boards', boards);
+  // save('boards', boards);
   return query(entityType).then((entities) =>
     entities.find((entity: any) => entity._id === entityId),
   );

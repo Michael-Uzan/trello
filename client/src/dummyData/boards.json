@@ -1,0 +1,62 @@
+[
+  {
+    "_id": "b101",
+    "title": "Emoji Maker Project",
+    "createdAt": 1589983468418,
+    "starred": true,
+    "workspaceId": "654321",
+    "members": [],
+    "background": {
+      "color": "#FF78CB",
+      "imgUrl": ""
+    }
+  },
+  {
+    "_id": "b102",
+    "title": "Life To do",
+    "createdAt": 1589983443418,
+    "starred": false,
+    "workspaceId": "654321",
+    "members": [],
+    "background": {
+      "color": "#FF78CB",
+      "imgUrl": ""
+    }
+  },
+  {
+    "_id": "b103",
+    "title": "Facebook App Project",
+    "createdAt": 1589983443788,
+    "starred": false,
+    "workspaceId": "123456",
+    "members": [],
+    "background": {
+      "color": "#FF78CB",
+      "imgUrl": ""
+    }
+  },
+  {
+    "_id": "b104",
+    "title": "Intagram App Project",
+    "createdAt": 1589963443788,
+    "starred": false,
+    "workspaceId": "123456",
+    "members": [],
+    "background": {
+      "color": "#FF78CB",
+      "imgUrl": ""
+    }
+  },
+  {
+    "_id": "b105",
+    "title": "Trello App Project",
+    "createdAt": 1589963222788,
+    "starred": false,
+    "workspaceId": "123456",
+    "members": [],
+    "background": {
+      "color": "#FF78CB",
+      "imgUrl": ""
+    }
+  }
+]

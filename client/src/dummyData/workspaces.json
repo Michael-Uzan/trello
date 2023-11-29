@@ -1,0 +1,65 @@
+[
+  {
+    "_id": "123456",
+    "name": "Coding",
+    "description": "A workspace for coding project",
+    "members": [],
+    "createdAt": 1589983443418,
+    "boards": [
+      {
+        "_id": "b101",
+        "title": "Emoji Maker Project",
+        "starred": true,
+        "background": {
+          "color": "",
+          "imgUrl": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2286x1600/24baa6609b89fb8eb0cc0aceb70eaf36/photo-1557682250-33bd709cbe85.jpg"
+        }
+      },
+      {
+        "_id": "b102",
+        "title": "Life To do",
+        "starred": false,
+        "background": {
+          "color": "#FF78CB",
+          "imgUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "_id": "654321",
+    "name": "My Tasks",
+    "description": "A workspace for my tasks",
+    "members": [],
+    "createdAt": 1589983245118,
+    "boards": [
+      {
+        "_id": "b103",
+        "title": "Facebook App Project",
+        "starred": false,
+        "background": {
+          "color": "#FF78CB",
+          "imgUrl": ""
+        }
+      },
+      {
+        "_id": "b104",
+        "title": "Intagram App Project",
+        "starred": false,
+        "background": {
+          "color": "#FF78CB",
+          "imgUrl": ""
+        }
+      },
+      {
+        "_id": "b105",
+        "title": "Trello App Project",
+        "starred": false,
+        "background": {
+          "color": "#FF78CB",
+          "imgUrl": ""
+        }
+      }
+    ]
+  }
+]

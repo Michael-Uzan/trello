@@ -1,4 +1,5 @@
 import { BoardView } from 'views/BoardView';
+import { WorkspacesView } from 'views/WorkspacesView';
 // import { HomePage } from "./pages/HomePage";
 // import { Login } from "./pages/Login";
 // import { Signup } from "./pages/Signup";
@@ -17,10 +18,10 @@ export const AppRoutes = () => {
       path: '/b/:boardId',
       element: <BoardView />,
     },
-    // {
-    //     path: '/boards',
-    //     component: UserBoards,
-    // },
+    {
+      path: '/u/boards',
+      element: <WorkspacesView />,
+    },
     // {
     //     path: '/cardNotFound',
     //     component: CardNotFound,
