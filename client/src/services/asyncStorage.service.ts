@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any*/
-// import boards from 'dummyData/boards.json';
-import workspaces from 'dummyData/workspaces.json';
+import board from 'dummyData/board.json';
+// import workspaces from 'dummyData/workspaces.json';
 
 export const asincStorageService = {
   query,
@@ -13,7 +13,7 @@ export const asincStorageService = {
 };
 
 function query(entityType: string, delay: number = 800): Promise<any> {
-  save('workspaces', workspaces);
+  save('board', board);
   const storedData: string | null = localStorage.getItem(entityType);
   const entities: any | Array<any> = storedData ? JSON.parse(storedData) : [];
 

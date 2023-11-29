@@ -6,15 +6,19 @@ import { useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import { GenericList } from 'components/common/GenericList';
 import { ListPreview } from 'components/views/board/ListPreview';
+import { LoaderWrapper } from 'components/common/LoaderWrapper';
 
 export const BoardView = () => {
   const { boardId } = useParams();
-  const [board, setBoard] = useState<IBoard | null>(null);
+  const [board, setBoard] = useState<IBoard>({} as IBoard);
   const [notFound, setNotFound] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<boolean>(false);
 
   useEffect(() => {
     const loadBoard = async (boardId: string) => {
       try {
+        setLoading(true);
         const board: IBoard = await boardService.getBoardById(boardId);
         if (board) {
           setBoard(board);
@@ -22,7 +26,9 @@ export const BoardView = () => {
           setNotFound(true);
         }
       } catch (err) {
-        // setError(true);
+        setError(true);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -35,14 +41,14 @@ export const BoardView = () => {
     return <div>{'Not Found'}</div>;
   }
 
-  if (!board) {
-    return <div>{'Loading'}</div>;
-  }
-
-  const { title, lists } = board;
+  const { title, lists } = board || {};
 
   return (
-    <div className="board-view flex direction-col">
+    <LoaderWrapper
+      className="board-view flex direction-col"
+      loading={loading}
+      error={error}
+    >
       <BoardHeader title={title} />
       <div className="board-canvas flex">
         <GenericList
@@ -51,6 +57,6 @@ export const BoardView = () => {
           renderItem={(list) => <ListPreview list={list} />}
         />
       </div>
-    </div>
+    </LoaderWrapper>
   );
 };

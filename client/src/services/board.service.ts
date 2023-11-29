@@ -13,6 +13,6 @@ export const boardService = {
 };
 
 function getBoardById(boardId: string): Promise<IBoard> {
-  return asincStorageService.get('boards', boardId);
+  return asincStorageService.get('board', boardId);
   //   return httpService.get(`boards/${boardId}`, { filterBy: filterBy });
 }
