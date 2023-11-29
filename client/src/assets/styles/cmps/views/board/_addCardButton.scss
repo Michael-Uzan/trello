@@ -1,0 +1,20 @@
+.add-card-container {
+  display: flex;
+  align-items: center;
+  margin: 0px 8px 8px;
+  padding: 5px 5px 5px 6px;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #091e4214;
+    color: #172b4d;
+  }
+
+  img {
+    margin-inline-end: rem(5px);
+    width: rem(16px);
+    height: 1.1rem;
+  }
+}

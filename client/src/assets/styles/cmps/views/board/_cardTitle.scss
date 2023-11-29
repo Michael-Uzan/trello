@@ -1,0 +1,17 @@
+.card-title {
+  word-wrap: break-word;
+  clear: both;
+  color: #172b4d;
+  display: block;
+  margin: 0 0 2px;
+  overflow: hidden;
+  text-decoration: none;
+
+  &.full {
+    font-size: rem(16px);
+    font-weight: 500;
+    line-height: rem(20px);
+    margin-bottom: 0;
+    padding-bottom: rem(8px);
+  }
+}

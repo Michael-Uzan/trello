@@ -10,19 +10,25 @@
 @import 'basics/base.scss';
 @import 'basics/buttons.scss';
 
-//Headers
-@import 'cmps/boardHeader';
+// Views
+@import 'views/boardView';
 
 // Components
-@import 'cmps/boardPreview';
 @import 'cmps/loading';
 @import 'cmps/userMsg';
 
-//CARD
-@import 'cmps/cardPreview';
+//  Board View
 
-//LIST
-@import 'cmps/boardList';
+@import 'cmps/views/board/boardHeader';
+@import 'cmps/views/board/boardHeaderSection';
+@import 'cmps/views/board/boardTitle';
+@import 'cmps/views/board/addFavoriteButton';
+@import 'cmps/views/board/listPreview';
+@import 'cmps/views/board/listTitle';
+@import 'cmps/views/board/addCardButton';
+@import 'cmps/views/board/cardsList';
+@import 'cmps/views/board/cardTitle';
+@import 'cmps/views/board/cardPreview';
 
 //CARD DETAILS:
 // @import 'cmps/cardDetails/cardTitle';
@@ -42,7 +48,6 @@
 // @import 'cmps/cardDetails/attachments';
 // @import 'cmps/cardDetails/attachmentsPreview';
 // @import 'cmps/cardDetails/cardArchive';
-
 // DASHBOARD
 // @import 'cmps/dashboard/dashboardTitle';
 // @import 'cmps/dashboard/lineTaskOverTime';
@@ -51,8 +56,6 @@
 // @import 'cmps/dashboard/pieTaskPerMember';
 // @import 'cmps/dashboard/barTaskPerLIst';
 
-// Views (pages)
-@import 'pages/boardApp';
 // @import 'pages/home-page';
 // @import 'pages/login-signup';
 // @import 'pages/cardDetails';

@@ -1,0 +1,17 @@
+.list-title {
+  flex: 0 0 auto;
+  min-height: 20px;
+  padding: 3px 8px;
+  position: relative;
+
+  h2 {
+    margin-inline-start: rem(9px);
+    word-break: break-all;
+    cursor: pointer;
+    padding-top: 7px;
+    font-weight: 600;
+    flex: 1 1;
+    font-size: rem(14px);
+    color: #172b4d;
+  }
+}

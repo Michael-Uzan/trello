@@ -1,0 +1,12 @@
+.add-favorite-button {
+  background-color: $bgcColor;
+  width: rem(32px);
+  height: rem(32px);
+  font-size: rem(16px);
+  margin-right: 3px;
+  &.active {
+    .star-icon {
+      color: #f2d600;
+    }
+  }
+}

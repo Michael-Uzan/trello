@@ -1,4 +1,4 @@
-import { BoardApp } from '../pages/BoardApp';
+import { BoardView } from 'views/BoardView';
 // import { HomePage } from "./pages/HomePage";
 // import { Login } from "./pages/Login";
 // import { Signup } from "./pages/Signup";
@@ -15,7 +15,7 @@ export const AppRoutes = () => {
   const routes = useRoutes([
     {
       path: '/b/:boardId',
-      element: <BoardApp />,
+      element: <BoardView />,
     },
     // {
     //     path: '/boards',

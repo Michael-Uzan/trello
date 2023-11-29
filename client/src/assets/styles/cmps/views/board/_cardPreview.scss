@@ -1,0 +1,44 @@
+.card-preview {
+  background-color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  cursor: pointer;
+  margin-bottom: rem(8px);
+  max-width: rem(300px);
+  min-height: rem(25px);
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 1px 0 #c0c6d0;
+  transition: transform 0.3s;
+
+  &.dragged {
+    transform: rotate(10deg) translateX(20px);
+  }
+
+  &.not-dragged {
+    transform: unset;
+  }
+
+  &:hover {
+    background-color: #f4f5f7;
+  }
+
+  .card-preview-header {
+    height: rem(32px);
+
+    &.img-cover {
+      background-position: 50%;
+      background-size: cover;
+      height: 260px;
+      background-repeat: no-repeat;
+      background-color: rgb(232, 227, 224);
+    }
+  }
+
+  .card-preview-main-content {
+    line-height: 20px;
+    padding: 0.125rem 0.625rem;
+  }
+}

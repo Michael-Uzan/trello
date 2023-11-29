@@ -1,0 +1,15 @@
+.board-header {
+  padding: 8px 4px 8px 14px;
+  width: 100%;
+  gap: 5px;
+
+  .board-btn {
+    height: 32px;
+    border-radius: rem(3px);
+    color: $fontColor;
+    background-color: #ffffff3d;
+    &:hover {
+      background-color: $bgcColor;
+    }
+  }
+}

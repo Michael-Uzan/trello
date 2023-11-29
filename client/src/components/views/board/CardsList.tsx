@@ -1,5 +1,5 @@
 import { CardPreview } from './CardPreview';
-import { ICard } from '../interfaces/ICard';
+import { ICard } from 'interfaces/ICard';
 
 import React from 'react';
 
@@ -7,9 +7,9 @@ interface IPropType {
   cards: ICard[];
 }
 
-export const CardList = ({ cards }: IPropType) => {
+export const CardsList = ({ cards }: IPropType) => {
   return (
-    <div className="all-cards">
+    <div className="cards-list">
       {cards.map((card: ICard) => (
         <CardPreview
           key={card._id}

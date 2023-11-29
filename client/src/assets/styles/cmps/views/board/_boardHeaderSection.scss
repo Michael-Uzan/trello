@@ -1,0 +1,15 @@
+.header-left {
+  gap: 4px;
+
+  .board-header-divider {
+    border-left: 1px solid #0003;
+    height: 16px;
+    padding: 5px;
+  }
+}
+
+.header-right {
+  flex-grow: 1;
+  justify-content: flex-end;
+  gap: 4px;
+}
