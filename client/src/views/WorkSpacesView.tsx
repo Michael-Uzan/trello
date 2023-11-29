@@ -1,9 +1,10 @@
 import { IWorkspace } from 'interfaces/IWorkSpace';
 import { workspaceService } from 'services/workspace.service';
 import { LoaderWrapper } from 'components/common/LoaderWrapper';
-import { WorkSpacesList } from 'components/views/workspaces/WorkSpacesList';
 
 import React, { useEffect, useState } from 'react';
+import { GenericList } from 'components/common/GenericList';
+import { WorkspacePreview } from 'components/views/workspaces/WorkspacePreview';
 
 export const WorkspacesView = () => {
   const [workspaces, setWorkspaces] = useState<IWorkspace[]>([]);
@@ -29,7 +30,11 @@ export const WorkspacesView = () => {
   return (
     <LoaderWrapper loading={loading} error={error}>
       <div>{'Your Workspace'}</div>
-      <WorkSpacesList workspaces={workspaces} />
+      <GenericList
+        className="workspaces-list"
+        items={workspaces}
+        renderItem={(workspace) => <WorkspacePreview workspace={workspace} />}
+      />
     </LoaderWrapper>
   );
 };

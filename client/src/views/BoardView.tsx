@@ -1,10 +1,11 @@
 import { boardService } from 'services/board.service';
 import { IBoard } from 'interfaces/IBoard';
-import { Lists } from 'components/views/board/Lists';
 import { BoardHeader } from 'components/views/board/BoardHeader';
 
 import { useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
+import { GenericList } from 'components/common/GenericList';
+import { ListPreview } from 'components/views/board/ListPreview';
 
 export const BoardView = () => {
   const { boardId } = useParams();
@@ -44,7 +45,11 @@ export const BoardView = () => {
     <div className="board-view flex direction-col">
       <BoardHeader title={title} />
       <div className="board-canvas flex">
-        <Lists lists={lists} />
+        <GenericList
+          className="flex"
+          items={lists}
+          renderItem={(list) => <ListPreview list={list} />}
+        />
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
+import { BoardPreview } from './BoardPreview';
 import { IWorkspace } from 'interfaces/IWorkSpace';
-import { BoardsList } from './BoardsList';
+import { GenericList } from 'components/common/GenericList';
 
 import React from 'react';
 
@@ -13,7 +14,11 @@ export const WorkspacePreview = ({ workspace }: IPropType) => {
   return (
     <div>
       <div>{workspace.name}</div>
-      <BoardsList boards={boards} />
+      <GenericList
+        className="boards-list"
+        items={boards}
+        renderItem={(board) => <BoardPreview board={board} />}
+      />
     </div>
   );
 };
