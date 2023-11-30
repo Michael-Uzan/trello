@@ -1,3 +1,6 @@
+import Image from './Image';
+import ImageLoading from 'assets/imgs/loading.gif';
+
 import React, { ReactNode } from 'react';
 
 interface IPropType {
@@ -14,7 +17,9 @@ export const LoaderWrapper = ({
   error,
 }: IPropType) => {
   return loading ? (
-    <div>{'loading'}</div>
+    <div className="loader-wrapper">
+      <Image src={ImageLoading} />
+    </div>
   ) : error ? (
     <div>{'error'}</div>
   ) : (

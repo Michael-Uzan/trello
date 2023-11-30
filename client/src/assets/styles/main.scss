@@ -12,13 +12,16 @@
 
 // Views
 @import 'views/boardView';
+@import 'views/workspacesView';
 
 // Components
-@import 'cmps/loading';
 @import 'cmps/userMsg';
 
-//  Board View
+// Common
+@import 'cmps/common/image';
+@import 'cmps/common/loaderWrapper';
 
+//  Board View
 @import 'cmps/views/board/boardHeader';
 @import 'cmps/views/board/boardHeaderSection';
 @import 'cmps/views/board/boardTitle';
