@@ -1,0 +1,10 @@
+.workspace-preview {
+  margin-bottom: 20px;
+
+  .boards-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px 10px;
+  }
+}

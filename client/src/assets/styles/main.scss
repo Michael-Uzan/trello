@@ -17,11 +17,11 @@
 // Components
 @import 'cmps/userMsg';
 
-// Common
+// Components - Common
 @import 'cmps/common/image';
 @import 'cmps/common/loaderWrapper';
 
-//  Board View
+//  Components - Board
 @import 'cmps/views/board/boardHeader';
 @import 'cmps/views/board/boardHeaderSection';
 @import 'cmps/views/board/boardTitle';
@@ -32,6 +32,10 @@
 @import 'cmps/views/board/cardsList';
 @import 'cmps/views/board/cardTitle';
 @import 'cmps/views/board/cardPreview';
+
+// Components - Workspaces
+@import 'cmps/views/workspaces/workspacePreview';
+@import 'cmps/views/workspaces/boardPreview';
 
 //CARD DETAILS:
 // @import 'cmps/cardDetails/cardTitle';

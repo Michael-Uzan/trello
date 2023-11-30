@@ -12,8 +12,8 @@ export const WorkspacePreview = ({ workspace }: IPropType) => {
   const { boards } = workspace;
 
   return (
-    <div>
-      <div>{workspace.name}</div>
+    <div className="workspace-preview">
+      <h3>{workspace.name}</h3>
       <GenericList
         className="boards-list"
         items={boards}

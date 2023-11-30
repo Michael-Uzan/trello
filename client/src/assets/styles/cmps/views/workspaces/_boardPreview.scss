@@ -1,0 +1,30 @@
+.board-preview {
+  width: 25%;
+  height: 80px;
+  border-radius: 5px;
+  position: relative;
+
+  .board-preview-title {
+    color: white;
+    margin: 5px 0 0 5px;
+    word-wrap: break-word;
+    display: inline-block;
+    flex: 0 0 auto;
+    font-size: 16px;
+    font-weight: 700;
+    max-height: 40px;
+    overflow: hidden;
+  }
+
+  .board-preview-shadow {
+    // pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #a1bdd914;
+  }
+
+  .board-preview-shadow:hover {
+    background-color: #859aaf42;
+  }
+}

@@ -29,12 +29,15 @@ export const WorkspacesView = () => {
 
   return (
     <LoaderWrapper className="Workspaces-view" loading={loading} error={error}>
-      <div>{'Your Workspace'}</div>
-      <GenericList
-        className="workspaces-list"
-        items={workspaces}
-        renderItem={(workspace) => <WorkspacePreview workspace={workspace} />}
-      />
+      <div className="menu-bar"></div>
+      <div className="workspaces-wrapper">
+        <h3 className="workspaces-view-title fs16">{'Your Workspace'}</h3>
+        <GenericList
+          className="workspaces-list"
+          items={workspaces}
+          renderItem={(workspace) => <WorkspacePreview workspace={workspace} />}
+        />
+      </div>
     </LoaderWrapper>
   );
 };
