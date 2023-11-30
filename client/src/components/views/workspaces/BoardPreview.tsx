@@ -1,3 +1,5 @@
+import classnames from 'classnames';
+import { IconStar } from 'components/common/Icons';
 import { IBoardPreview } from 'interfaces/IBoard';
 
 import React from 'react';
@@ -8,7 +10,7 @@ interface IPropType {
 }
 
 export const BoardPreview = ({ board }: IPropType) => {
-  const { background, title, _id } = board;
+  const { _id, background, title, starred } = board;
 
   return (
     <Link
@@ -22,7 +24,12 @@ export const BoardPreview = ({ board }: IPropType) => {
       to={`/b/${_id}`}
     >
       <div className="board-preview-shadow" />
-      <div className="board-preview-title">{title}</div>
+      <div className="board-preview-title bold">{title}</div>
+      <IconStar
+        className={classnames('board-preview-star', starred ? 'active' : null)}
+        full={starred}
+        size={13}
+      />
     </Link>
   );
 };

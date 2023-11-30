@@ -1,4 +1,4 @@
-import { IWorkspace } from 'interfaces/IWorkSpace';
+import { IStarredWorkspace, IWorkspace } from 'interfaces/IWorkSpace';
 import { workspaceService } from 'services/workspace.service';
 import { LoaderWrapper } from 'components/common/LoaderWrapper';
 import { GenericList } from 'components/common/GenericList';
@@ -27,11 +27,22 @@ export const WorkspacesView = () => {
     loadWorkspaces();
   }, []);
 
+  const filterStarredBoards = getFilterStarredBoards(workspaces);
+
   return (
-    <LoaderWrapper className="Workspaces-view" loading={loading} error={error}>
+    <LoaderWrapper className="workspaces-view" loading={loading} error={error}>
       <div className="menu-bar"></div>
       <div className="workspaces-wrapper">
-        <h3 className="workspaces-view-title fs16">{'Your Workspace'}</h3>
+        {filterStarredBoards.boards.length ? (
+          <GenericList
+            className="workspaces-list"
+            items={[filterStarredBoards]}
+            renderItem={(workspace) => (
+              <WorkspacePreview workspace={workspace} />
+            )}
+          />
+        ) : null}
+        <h3 className="workspaces-view-title fs16 bold">{'Your Workspace'}</h3>
         <GenericList
           className="workspaces-list"
           items={workspaces}
@@ -41,3 +52,21 @@ export const WorkspacesView = () => {
     </LoaderWrapper>
   );
 };
+
+function getFilterStarredBoards(workspaces: IWorkspace[]): IStarredWorkspace {
+  const result: IStarredWorkspace = {
+    _id: 'starredBoard',
+    name: 'Starred boards',
+    boards: [],
+  };
+
+  workspaces.forEach((workspace) =>
+    workspace.boards.forEach((board) => {
+      if (board.starred) {
+        result.boards.push(board);
+      }
+    }),
+  );
+
+  return result;
+}

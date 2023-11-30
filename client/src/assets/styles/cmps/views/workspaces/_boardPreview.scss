@@ -11,7 +11,6 @@
     display: inline-block;
     flex: 0 0 auto;
     font-size: 16px;
-    font-weight: 700;
     max-height: 40px;
     overflow: hidden;
   }
@@ -26,5 +25,31 @@
 
   .board-preview-shadow:hover {
     background-color: #859aaf42;
+  }
+
+  .board-preview-star {
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+    transition: right 0.3s;
+    visibility: hidden;
+
+    &.active {
+      color: yellow;
+      right: 10px;
+      visibility: visible;
+    }
+  }
+
+  &:hover {
+    .board-preview-star {
+      right: 10px;
+      visibility: visible;
+
+      &:hover {
+        scale: 1.2;
+      }
+    }
   }
 }

@@ -8,3 +8,9 @@ export interface IWorkspace {
   members: string[];
   boards: IBoardPreview[];
 }
+
+export interface IStarredWorkspace {
+  _id: string;
+  name: string;
+  boards: IBoardPreview[];
+}
